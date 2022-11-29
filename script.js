@@ -11,7 +11,7 @@ var generateButton=document.querySelector("#generate");
 
 
 // Add event listener to generate button
-generatebutton.addEventListener ("click", writePassword);
+generateButton.addEventListener ("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
