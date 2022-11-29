@@ -38,6 +38,17 @@ function getprompt() {
   return true;
 }
 
+function generatePassword() {
+  //generate password based on answers from prompts
+  var password = "";
+  for (var i = 0; i < characterLength; i++) {
+    var randomIndex = math.floor(Math.random() * choiceArray.length)
+    password = password + choiceArray[randomIndex];
+  }
+  return password;
+
+}
+
 // Write password to the #password input
 function writePassword() {
   var correctPrompts = getprompts();
@@ -51,17 +62,9 @@ function writePassword() {
   }
  
 }
-
-function generatePassword() {
-  //generate password based on answers from prompts
-  var password = "";
-  for (var i = 0; i < characterLength; i++) {
-    var randomIndex = math.floor(Math.random() * choiceArray.length)
-    password = password + choiceArray[randomIndex];
-  }
-  return password;
-
 }
+
+
 
   
 
